@@ -15,6 +15,7 @@ import java.util.TimerTask;
 
 import weka.classifiers.Classifier;
 import weka.classifiers.bayes.NaiveBayes;
+import weka.classifiers.functions.LibSVM;
 import weka.classifiers.functions.LinearRegression;
 import weka.classifiers.functions.RBFNetwork;
 import weka.classifiers.meta.AdaBoostM1;
@@ -70,6 +71,7 @@ public class BuildClassifier extends TabActivity{
 	private static final int ADABOOSTM1 = 3;
 	private static final int ZEROR = 4;
 	private static final int LinearRegression = 5;
+	private static final int SVM = 6;
 	
 	private List<String> items = null;
 	private List<String> paths = null;
@@ -92,7 +94,7 @@ public class BuildClassifier extends TabActivity{
 	private ProgressBar progress;
 	
 	private String[] VAR;
-	private static final String[]  ALG = { "NAIVEBAYES" ,"RBFNETWORK", "J48", "ADABOOSTM1","ZEROR", "LinearRegression"};
+	private static final String[]  ALG = { "NAIVEBAYES" ,"RBFNETWORK", "J48", "ADABOOSTM1","ZEROR", "LinearRegression", "SVM"};
 	private ArrayAdapter<String> aspn;
 	
 	private float time;
@@ -240,24 +242,27 @@ public class BuildClassifier extends TabActivity{
 	
 	public void Train() {
 		switch (chooseALG) {
-		case NAIVEBAYES:
-			cfs = new NaiveBayes();
-			break;
-		case RBFNETWORK:
-			cfs = new RBFNetwork();
-			break;
-		case J48:
-			cfs = new J48();
-			break;
-		case ADABOOSTM1:
-			cfs = new AdaBoostM1();
-			break;
-		case ZEROR:
-			cfs = new ZeroR();
-			break;
-		case LinearRegression:
-			cfs = new LinearRegression();
-			break;
+			case NAIVEBAYES:
+				cfs = new NaiveBayes();
+				break;
+			case RBFNETWORK:
+				cfs = new RBFNetwork();
+				break;
+			case J48:
+				cfs = new J48();
+				break;
+			case ADABOOSTM1:
+				cfs = new AdaBoostM1();
+				break;
+			case ZEROR:
+				cfs = new ZeroR();
+				break;
+			case LinearRegression:
+				cfs = new LinearRegression();
+				break;
+			case SVM:
+				cfs = new LibSVM();
+				break;
 		}
 		instancesTrain.setClassIndex(chooseVar);
 		try {
