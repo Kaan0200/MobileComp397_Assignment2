@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/hnelken/Desktop/dev/android/MobileComp397_Assignment2/app/libs/libsvm.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5a763e981994e688c5a764630277a4a41ff980f6">
+        <dex dex="/Users/hnelken/Desktop/dev/android/MobileComp397_Assignment2/app/build/intermediates/pre-dexed/debug/libsvm-1211c0e487665e160ae5a7a84dbcef4557662828.jar" />
+    </item>
+    <item
+        jar="/Users/hnelken/Desktop/dev/android/MobileComp397_Assignment2/app/libs/weka-3.6.6-android.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d5bef25d824a9a782e887bf2748df5a6e6788b1f">
+        <dex dex="/Users/hnelken/Desktop/dev/android/MobileComp397_Assignment2/app/build/intermediates/pre-dexed/debug/weka-3.6.6-android-4f2416dd980f840485d0f4f240c69df2297ab024.jar" />
+    </item>
+
+</items>
